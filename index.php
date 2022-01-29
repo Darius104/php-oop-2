@@ -12,12 +12,14 @@ require_once __DIR__ . '/Monitor.php';
 require_once __DIR__ . '/User.php';
 
 $tastiera = new Keyboard('logitec', 80, 'American');
-var_dump($tastiera);
 
 $monitor = new Monitor('LG', 220, 25);
-var_dump($monitor);
 
-$user = new User('Mario', 'Rossi', 'mariorossi@gmail.com', 20);
-var_dump($user);
+$mario = new User('Mario', 'Rossi', 'mariorossi@gmail.com', 20);
+$mario->addProduct($tastiera);
+$mario_cart = $mario->getCart();
+
+var_dump($mario_cart)
+
 
 ?>
