@@ -10,11 +10,11 @@
 require_once __DIR__ . '/Keyboard.php';
 require_once __DIR__ . '/Monitor.php';
 
-$tastiera = new Keyboard('logitec', 80);
+$tastiera = new Keyboard('logitec', 80, 'American');
 var_dump($tastiera);
 
 
-$monitor = new Monitor('LG', 220);
+$monitor = new Monitor('LG', 220, 25);
 var_dump($monitor);
 
 ?>
