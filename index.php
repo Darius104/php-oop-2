@@ -15,11 +15,33 @@ $tastiera = new Keyboard('logitec', 80, 'American');
 
 $monitor = new Monitor('LG', 220, 25);
 
-$mario = new User('Mario', 'Rossi', 'mariorossi@gmail.com', 20);
+$mario = new User('Mario', 'Rossi', 'mariorossi@gmail.com', 10);
 $mario->addProduct($tastiera);
+$mario->addProduct($monitor);
 $mario_cart = $mario->getCart();
 
 var_dump($mario_cart)
-
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Benvenuto <?php echo $mario->getFullName() ?> questo è il tuo carrello !</h1>
+
+    <?php foreach($mario_cart as $element) { ?>
+        <div>
+            <h2>----------------</h2>
+            <h2>Nome: <?php echo $element->name ?> </h2>
+            <h2>Descrizione: <?php echo $element->description ?> </h2>
+            <h3>Prezzo: <?php echo $element->price ?> €</h3>
+        </div>
+    <?php } ?>
+
+</body>
+</html>

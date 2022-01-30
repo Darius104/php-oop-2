@@ -6,6 +6,7 @@ class User{
     public $email;
     public $age;
     protected $cart = [];
+    protected $scont;
 
     public function __construct($_name, $_lastname, $_email, $_age){
         $this->name = $_name;
@@ -20,7 +21,7 @@ class User{
     }
 
     public function addProduct($product){
-        $this->$cart[] = $product;
+        $this->cart[] = $product;
     }
 
     public function getCart(){
