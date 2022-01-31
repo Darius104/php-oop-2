@@ -20,7 +20,7 @@ $mario->addProduct($tastiera);
 $mario->addProduct($monitor);
 $mario_cart = $mario->getCart();
 
-var_dump($mario_cart)
+var_dump($mario_cart);
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +40,7 @@ var_dump($mario_cart)
             <h2>Nome: <?php echo $element->name ?> </h2>
             <h2>Descrizione: <?php echo $element->description ?> </h2>
             <h3>Prezzo: <?php echo $element->price ?> €</h3>
+            <span>News: <?php echo $element->new ?></span>
         </div>
     <?php } ?>
 

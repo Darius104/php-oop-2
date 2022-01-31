@@ -7,6 +7,7 @@ class Keyboard extends Product{
 
     public $layout = 'American';
     public $led = 'RGB';
+    public $new = 'colore nero ora rosso';
 
     //override
     public function __construct($_name, $_price, $_layout){

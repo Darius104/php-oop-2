@@ -1,6 +1,9 @@
 <?php
+require_once __DIR__ . '/News.php';
 
 class Product{
+    use News;
+
     public $name;
     public $price;
     public $description = 'Product';
