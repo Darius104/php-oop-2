@@ -10,9 +10,10 @@ class Keyboard extends Product{
     public $new = 'colore nero ora rosso';
 
     //override
-    public function __construct($_name, $_price, $_layout){
+    public function __construct($_name, $_price, $_layout, $_new){
         parent::__construct($_name, $_price);
         $this->layout = $_layout;
+        $this->new = $_new;
 
     }
 }

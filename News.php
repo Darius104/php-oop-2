@@ -3,5 +3,4 @@
 trait News{
     public $new;
 }
-
 ?>
