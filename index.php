@@ -13,7 +13,16 @@ require_once __DIR__ . '/User.php';
 
 $tastiera = new Keyboard('logitec', 80, 'American', 'colore nero ora disponibile');
 
-$monitor = new Monitor('LG', 220, 25, 'Ora disponibile');
+try{
+    //Per generare un'errore sostituire l'ultima stringa dell'istanza con un numero
+    
+    //prova a fare questo.
+    $monitor = new Monitor('LG', 220, 25, 'Ora disponibile');
+} catch(Exception $e){
+    //in caso di errore catturalo e gestisci l'errore.
+    echo 'Errore stiamo gestendo la pagina';
+    die();
+}
 
 $mario = new User('Mario', 'Rossi', 'mariorossi@gmail.com', 10);
 $mario->addProduct($tastiera);
